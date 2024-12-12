@@ -1,9 +1,20 @@
 # IntegrationFinal
 Projet Final Programmation Web Client  
-Contributeur: Fab, Evan Beaufreton, Alex bedet.
+
+### Contributeurs :
+- Fabien Guitton
+- Evan Beaufreton
+- Alex Bedet
+
+## Maquette
+
+La maquette du projet peut être consultée ici : [Maquette](https://xd.adobe.com/view/bd6f061d-30aa-47fa-a2d6-60f421c148ef-e83c/specs/).
+
+## Dépôt Celene
+
+Le dépôt Celene est ici : [Dépot](https://celene.univ-tours.fr/mod/assign/view.php?id=892693).
 
 ## Résumé des commandes Git
-
 | Action                                      | Commande                                 |
 |---------------------------------------------|------------------------------------------|
 | Créer une nouvelle branche                 | `git checkout -b nom_de_la_branche`      |
