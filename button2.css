@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -15,7 +17,7 @@ p {
     color: white;
 }
 
-.container{
+.part2button{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,22 +25,24 @@ p {
     gap: 20px;
     margin: 40px 20px;
 }
-.title-content{
+.part2button .title-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    margin: 0 auto;
-
-    width: 100%;
-    max-width: 1200px;
+    font-family: 'Albert Sans', sans-serif;
+    width: 80%;
 }
-.title-content h1{
+.part2button .highlight {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+.part2button .title-content h1{
     font-size: 2.5rem;
     margin: 0;
     max-width: 70%;
 }
-.title-content button{
+.part2button .title-content button{
     color: red;
     background-color: white;
     border: 0px;
@@ -50,11 +54,11 @@ p {
     width: 180px;
     height: 30px;
 }
-.title-content button:hover {
+.part2button .title-content button:hover {
     transform: scale(1.05); 
 }
 
-.categories {
+.part2button .categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,7 +66,7 @@ p {
     margin-top: 40px;
     width: 80%;
 }
-.category {
+.part2button .category {
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid white;
     border-radius: 10px;
@@ -73,22 +77,23 @@ p {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.category:hover {
+.part2button .category:hover {
     transform: translateY(-10px);
-    background-color: red;
+    background-color: #EC1C24;
 }
 
-.category img {
-    width: 50px;
-    height: 50px;
+.part2button .category img {
+    width: 65px;
+    height: 65px;
     margin-bottom: 10px;
 }
 
-.category p {
-    margin: 0;
-    font-size: 1.1rem;
+.part2button .category p {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 0.9rem;
 }
 
-.text{
-    margin-top: 20px;;
+.part2button .text{
+    margin-top: 20px;
+    font-family: 'Albert Sans', sans-serif;
 }
