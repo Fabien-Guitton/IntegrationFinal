@@ -9,19 +9,16 @@ body {
     background-color: #EC1C24; 
 }
 
-h1 {
-    color: white;
-}
-
 p {
     color: white;
+    font-family: 'Albert Sans', sans-serif;
 }
 
 .part1button{
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .part1button .categories {
@@ -54,8 +51,23 @@ p {
     margin-bottom: 10px;
 }
 
+.part1button .category:hover #objet {
+    content: url("./import/objetsR.png");
+}
+.part1button .category:hover #acces {
+    content: url("./import/accèsR.png");
+}
+.part1button .category:hover #plan {
+    content: url("./import/planR.png");
+}
+.part1button .category:hover #accessibilite {
+    content: url("./import/accessibilitéR.png");
+}
+.part1button .category:hover #services {
+    content: url("./import/servicesR.png");
+}
+
 .part1button .category p {
-    font-family: 'Albert Sans', sans-serif;
     font-size: 0.9rem;
 }
 .part1button .category:hover p{
