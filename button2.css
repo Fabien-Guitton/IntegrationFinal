@@ -9,12 +9,9 @@ body {
     background-color: grey; /* pour testes les couleurs*/
 }
 
-h1 {
+h1, p {
     color: white;
-}
-
-p {
-    color: white;
+    font-family: 'Albert Sans', sans-serif;
 }
 
 .part2button{
@@ -30,7 +27,6 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    font-family: 'Albert Sans', sans-serif;
     width: 80%;
 }
 .part2button .highlight {
@@ -89,11 +85,9 @@ p {
 }
 
 .part2button .category p {
-    font-family: 'Albert Sans', sans-serif;
     font-size: 0.9rem;
 }
 
 .part2button .text{
     margin-top: 20px;
-    font-family: 'Albert Sans', sans-serif;
 }
