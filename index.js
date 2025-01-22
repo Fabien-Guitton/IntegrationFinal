@@ -1,10 +1,5 @@
 bootstrap.Tooltip.VERSION // => "5.3.0"
 
-const carousel = new bootstrap.Carousel('#carousel1', {
-    interval: 3000, // Temps entre les transitions (en ms)
-    wrap: true // Si true, le carousel recommence à la première slide après la dernière
-  });
-
 // Attendre que le DOM soit chargé avant l'initialisation
 document.addEventListener('DOMContentLoaded', () => {
     const carouselElement = document.querySelector('#carousel1');
