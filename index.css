@@ -17,7 +17,6 @@
     height: 41.2em;
     display: flex; /* Déjà dans la classe bootstrap */
     margin-top: 20px;
-    background-color: aqua;
 }
 
 /*
@@ -25,6 +24,10 @@
     position: relative
 }
 */
+
+.carousel-indicators {
+    padding-left: 15%!important;
+}
 
 .carousel-indicators button {
     width: 0.7em!important;
@@ -89,9 +92,7 @@
 */
 
 .carousel-item {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease-in-out;
-    background-color: violet;
 }
 
 /*
@@ -109,9 +110,10 @@
 
 /* Fixe la hauteur des images et leur ajustement */
 .carousel-item img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 40em;
     object-fit: cover; /* Les images conservent leurs proportions */
     width: 43em;
     border-radius: 1em;
-    margin-left: 1em;
+    margin-left: 3.2em;
 }
