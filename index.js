@@ -1,4 +1,9 @@
-bootstrap.Tooltip.VERSION // => "5.3.0"
+/*
+ * JavaScript - Utilisation de Bootstrap v5.3.3
+ *
+*/
+
+bootstrap.Tooltip.VERSION // => "5.3.3"
 
 // Attendre que le DOM soit chargé avant l'initialisation
 document.addEventListener('DOMContentLoaded', () => {
