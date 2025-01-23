@@ -11,3 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* 
+    Si il a le temps gérer les sliders avec un algo case par case
+*/
