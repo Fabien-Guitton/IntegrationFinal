@@ -1,0 +1,193 @@
+/* Styles globaux */
+@font-face {
+    font-family: 'Albert sans';
+    src: url('./AlbertSans-VariableFont_wght.ttf') format('truetype'); 
+}
+
+body {
+    margin: 0px;
+    font-family: 'Albert sans', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; /* Assure que l'entête reste visible au-dessus des autres éléments */
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+#logo_header {
+    margin: 10px 10px 10px 50px;
+    color: black;
+    font-weight: 700;
+    font-size: 70px;
+}
+
+/* Bouton burger */
+#burger-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Visible en mobile */
+    margin-right: 10px;
+}
+
+/* Navigation classique */
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Horaires et loupe */
+.open-info {
+    background-color: rgb(244, 229, 0);
+    color: black;
+    padding: 17.5px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+#loupe_header {
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+}
+
+#p1_horaire {
+    font-weight: 500;
+}
+
+#p2_horaire {
+    font-weight: 700;
+}
+
+.header-bottom {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 1250px) {
+    #logo_header {
+        font-size: 60px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #logo_header {
+        font-size: 50px;
+        margin: 10px;
+    }
+
+    .open-info {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+
+    .header-top {
+        justify-content: space-between;
+    }
+
+    #loupe_header {
+        width: 24px;
+        height: 24px;
+        padding: 24px;
+    }
+
+    .side-menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1001;
+        transition: left 0.3s ease;
+        backdrop-filter: blur(5px); /* Flou d'arrière-plan */
+    }
+
+    .side-menu nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }    
+
+    .side-menu .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .side-menu .nav-links a {
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+        padding: 15px;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+    
+}
+
+@media (max-width: 620px) {
+    #logo_header {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    #loupe_header {
+        padding: 10px;
+    }
+
+    .open-info {
+        padding: 15px 10px;
+    }
+}
+
+#taille {
+    height: 10000px;
+}
