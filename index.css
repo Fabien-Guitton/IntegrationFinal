@@ -15,7 +15,7 @@ body {
     left: 0;
     width: 100%;
     background-color: white;
-    z-index: 1000; /* Assure que l'entête reste visible au-dessus des autres éléments */
+    z-index: 1000;
 }
 
 .header-top {
@@ -33,16 +33,15 @@ body {
 }
 
 /* Bouton burger */
-#burger-menu {
+#bouton_burger {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    display: none; /* Visible en mobile */
+    display: none;
     margin-right: 10px;
 }
 
-/* Navigation classique */
 .nav-links {
     display: flex;
     gap: 50px;
@@ -55,13 +54,13 @@ body {
     font-weight: 700;
 }
 
-.right-section {
+.section_horaire {
     display: flex;
     align-items: center;
 }
 
 /* Horaires et loupe */
-.open-info {
+.infos_horaire {
     background-color: rgb(244, 229, 0);
     color: black;
     padding: 17.5px 30px;
@@ -95,7 +94,7 @@ body {
     font-weight: 400;
 }
 
-/* Responsive */
+/* Responsive ou mobile first*/
 @media (max-width: 1250px) {
     #logo_header {
         font-size: 60px;
@@ -107,7 +106,7 @@ body {
 }
 
 @media (max-width: 1000px) {
-    #burger-menu {
+    #bouton_burger {
         display: block;
     }
 
@@ -120,7 +119,7 @@ body {
         margin: 10px;
     }
 
-    .open-info {
+    .section_horaire {
         font-size: 16px;
         padding: 15px 25px;
     }
@@ -135,7 +134,7 @@ body {
         padding: 24px;
     }
 
-    .side-menu {
+    .menu_burger {
         position: fixed;
         top: 0;
         left: -250px;
@@ -147,13 +146,13 @@ body {
         backdrop-filter: blur(5px); /* Flou d'arrière-plan */
     }
 
-    .side-menu nav {
+    .menu_burger nav {
         display: flex;
         flex-direction: column;
         height: 100%;
     }    
 
-    .side-menu .close-menu {
+    .menu_burger .fermer {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -162,7 +161,7 @@ body {
         cursor: pointer;
     }
 
-    .side-menu .nav-links a {
+    .menu_burger .liens a {
         color: white;
         font-size: 28px;
         font-weight: 700;
@@ -183,7 +182,7 @@ body {
         padding: 10px;
     }
 
-    .open-info {
+    .section_horaire {
         padding: 15px 10px;
     }
 }
