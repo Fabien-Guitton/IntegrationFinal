@@ -13,12 +13,12 @@
     overflow-x: hidden;
 }
 
-/* HEADER */ 
-/* Styles globaux */
 @font-face {
     font-family: 'Albert sans';
-    src: url('./AlbertSans-VariableFont_wght.ttf') format('truetype'); 
+    src: url('./AlbertSans-VariableFont_wght.ttf') format('truetype');
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
 
 body {
     margin: 0px;
@@ -32,6 +32,11 @@ body {
     background-repeat: no-repeat; /* Pas de répétition de l'image */
     background-attachment: fixed; /* Fait en sorte que l'image reste fixe */
     background-position: center;
+}
+
+h1, p {
+    color: white;
+    font-family: 'Albert Sans', sans-serif;
 }
 
 .header {
@@ -48,6 +53,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
+    height: 7em;
+    overflow-y: hidden;
 }
 
 #logo_header {
@@ -114,103 +121,11 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 15px 0px;
+    padding: 5px 0px;
     font-size: 18px;
     font-weight: 400;
-}
-
-/* Responsive ou mobile first*/
-@media (max-width: 1250px) {
-    #logo_header {
-        font-size: 60px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 1000px) {
-    #bouton_burger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    #logo_header {
-        font-size: 50px;
-        margin: 10px;
-    }
-
-    .infos_horaire {
-        font-size: 16px;
-        padding: 15px 25px;
-    }
-
-    .header-top {
-        justify-content: space-between;
-    }
-
-    #loupe_header {
-        width: 24px;
-        height: 24px;
-        padding: 24px;
-    }
-
-    .menu_burger {
-        position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 1001;
-        transition: left 0.3s ease;
-        backdrop-filter: blur(5px); /* Flou d'arrière-plan */
-    }
-
-    .menu_burger nav {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }    
-
-    .menu_burger .fermer {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .menu_burger .liens a {
-        color: white;
-        font-size: 28px;
-        font-weight: 700;
-        padding: 15px;
-        text-decoration: none;
-        border-bottom: 1px solid white;
-    }
-    
-}
-
-@media (max-width: 620px) {
-    #logo_header {
-        font-size: 30px;
-        margin: 0px;
-    }
-
-    #loupe_header {
-        padding: 10px;
-    }
-
-    .infos_horaire {
-        font-size: 16px;
-        padding: 15px 10px;
-    }
+    height: 2em;
+    overflow-y: hidden;
 }
 
 /* SLIDER 1 */
@@ -297,142 +212,6 @@ body {
 }
 */
 
-@media only screen and (max-width: 2560px) {
-    #carousel1 {
-        width: 100%;
-        height: 70em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 2em;
-    }
-    
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 68em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 71em;
-        border-radius: 1em;
-        margin-left: 6em;
-    }
-}
-
-@media only screen and (max-width: 1920px) {
-    #carousel1 {
-        width: 100%;
-        height: 41.2em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 12em;
-    }
-
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 40em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 40em;
-        border-radius: 1em;
-        margin-left: 5.1em;
-    }
-
-    .carousel-indicators {
-        padding-left: 20%!important;
-        padding-bottom: 2%!important;
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    #carousel1 {
-        width: 100%;
-        height: 41.2em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 1em;
-    }
-
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 40em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 40em;
-        border-radius: 1em;
-        margin-left: 3.2em;
-    }
-
-    .carousel-indicators {
-        padding-left: 20%!important;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    #carousel1 {
-        width: 100%;
-        height: 41.2em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 2em;
-    }
-
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 40em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 27em;
-        border-radius: 1em;
-        margin-left: 3.2em;
-    }
-
-    .carousel-indicators {
-        padding-left: 25%!important;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #carousel1 {
-        width: 100%;
-        height: 41.2em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 1em;
-    }
-    
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 40em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 20em;
-        border-radius: 1em;
-        margin-left: 3.2em;
-    }
-
-    .carousel-indicators {
-        padding-left: 40%!important;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    #carousel1 {
-        width: 100%;
-        height: 45em;
-        display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 2em;
-    }
-
-    /* Fixe la hauteur des images et leur ajustement */
-    .carousel-item img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 20em;
-        object-fit: cover; /* Les images conservent leurs proportions */
-        width: 15em;
-        border-radius: 1em;
-        margin-left: 6em;
-        margin-bottom: 2em;
-    }
-
-    .carousel-indicators {
-        padding-left: 5%!important;
-    }
-}
-
 /*
 .carousel {
     position: relative
@@ -440,17 +219,6 @@ body {
 */
 
 /* BUTTON 1 */
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
-
-body {
-    background-color: #EC1C24!important; 
-}
-
-p {
-    color: white;
-    font-family: 'Albert Sans', sans-serif;
-}
-
 .part1button {
     display: flex;
     flex-direction: column;
@@ -519,6 +287,47 @@ p {
     margin-top: 10em;
 }
 
+#carousel2 .title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: 20%;
+    padding-left: 20%;
+}
+
+#carousel2 .highlight {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+#carousel2 .title-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    max-width: 70%;
+}
+
+#carousel2 .title-content button {
+    color: red;
+    background-color: white;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    flex-shrink: 0;
+
+    width: 250px;
+    height: 30px;
+
+    margin-top: -3em;
+    margin-right: 11em;
+}
+
+#carousel2 .title-content button:hover {
+    transform: scale(1.05); 
+}
+
 .carousel-control-prev {
     height: 4em;
     margin-top: 4em!important;
@@ -545,11 +354,6 @@ p {
     margin-right: 0px!important;
 }
 
-.carousel-inner2 {
-    margin-top: 5em;
-    overflow: hidden; /* Assure que rien ne dépasse du carrousel */
-}
-
 .carousel-item2 {
     transition: transform 0.5s ease-in-out;
     margin-top: 0em!important;
@@ -567,11 +371,6 @@ p {
 }
 
 /* BUTTON 2 */
-h1, p {
-    color: white;
-    font-family: 'Albert Sans', sans-serif;
-}
-
 .part2button {
     background-color: transparent;
     display: flex;
@@ -669,10 +468,6 @@ h1, p {
     margin-top: 5em;
 }
 
-.carousel-inner3 {
-    overflow: hidden; /* Assure que rien ne dépasse du carrousel */
-}
-
 .carousel-item3 {
     transition: transform 0.5s ease-in-out;
     margin-left: 0.2em;
@@ -680,7 +475,7 @@ h1, p {
 
 /* Fixe la hauteur des images et leur ajustement */
 .carousel-item3 img {
-    height: 100%;
+    height: 10%;
     object-fit: cover; /* Les images conservent leurs proportions */
     width: 11%;
     border-radius: 0em!important;
@@ -688,46 +483,262 @@ h1, p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive ou mobile first*/
+@media (max-width: 1250px) {
+    #logo_header {
+        font-size: 60px;
+    }
 
-
-
-#carousel2 .title-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    height: 20%;
-    padding-left: 20%;
+    .nav-links {
+        gap: 15px;
+    }
 }
 
-#carousel2 .highlight {
-    color: transparent;
-    -webkit-text-stroke: 1px white;
+@media (max-width: 1000px) {
+    #bouton_burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #logo_header {
+        font-size: 50px;
+        margin: 10px;
+    }
+
+    .infos_horaire {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+
+    .header-top {
+        justify-content: space-between;
+    }
+
+    #loupe_header {
+        width: 24px;
+        height: 24px;
+        padding: 24px;
+    }
+
+    .menu_burger {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1001;
+        transition: left 0.3s ease;
+        backdrop-filter: blur(5px); /* Flou d'arrière-plan */
+    }
+
+    .menu_burger nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }    
+
+    .menu_burger .fermer {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu_burger .liens a {
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+        padding: 15px;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+    
 }
 
-#carousel2 .title-content h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    max-width: 70%;
+@media (max-width: 620px) {
+    #logo_header {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    #loupe_header {
+        padding: 10px;
+    }
+
+    .infos_horaire {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
 }
 
-#carousel2 .title-content button {
-    color: red;
-    background-color: white;
-    border: 0px;
-    border-radius: 3px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    flex-shrink: 0;
-
-    width: 250px;
-    height: 30px;
-
-    margin-top: -3em;
-    margin-right: 11em;
+@media only screen and (max-width: 2560px) {
+    #carousel1 {
+        width: 100%;
+        height: 70em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 2em;
+    }
+    
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 68em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 71em;
+        border-radius: 1em;
+        margin-left: 6em;
+    }
 }
 
-#carousel2 .title-content button:hover {
-    transform: scale(1.05); 
+@media only screen and (max-width: 1920px) {
+    #carousel1 {
+        width: 100%;
+        height: 41.2em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 7.5em;
+    }
+
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 40em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 40em;
+        border-radius: 1em;
+        margin-left: 5.1em;
+    }
+
+    .carousel-indicators {
+        padding-left: 20%!important;
+        padding-bottom: 2%!important;
+    }
+
+    .carousel-item2 {
+        transition: transform 0.5s ease-in-out;
+        margin-top: 0em!important;
+    }
+    
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item2 img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 24%;
+        border-radius: 1em;
+        margin-left: 0.5%;
+    }
+
+    .carousel-item3 {
+        transition: transform 0.5s ease-in-out;
+        margin-left: 0.2em;
+    }
+    
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item3 img {
+        height: 10%;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 11%;
+        border-radius: 0em!important;
+        margin-left: 1em!important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    #carousel1 {
+        width: 100%;
+        height: 41.2em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 1em;
+    }
+
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 40em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 40em;
+        border-radius: 1em;
+        margin-left: 3.2em;
+    }
+
+    .carousel-indicators {
+        padding-left: 20%!important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #carousel1 {
+        width: 100%;
+        height: 41.2em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 2em;
+    }
+
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 40em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 27em;
+        border-radius: 1em;
+        margin-left: 3.2em;
+    }
+
+    .carousel-indicators {
+        padding-left: 25%!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #carousel1 {
+        width: 100%;
+        height: 41.2em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 1em;
+    }
+    
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 40em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 20em;
+        border-radius: 1em;
+        margin-left: 3.2em;
+    }
+
+    .carousel-indicators {
+        padding-left: 40%!important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #carousel1 {
+        width: 100%;
+        height: 45em;
+        display: flex; /* Déjà dans la classe bootstrap */
+        margin-top: 2em;
+    }
+
+    /* Fixe la hauteur des images et leur ajustement */
+    .carousel-item img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 20em;
+        object-fit: cover; /* Les images conservent leurs proportions */
+        width: 15em;
+        border-radius: 1em;
+        margin-left: 6em;
+        margin-bottom: 2em;
+    }
+
+    .carousel-indicators {
+        padding-left: 5%!important;
+    }
 }
