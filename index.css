@@ -245,6 +245,7 @@ h1, p {
     transition: transform 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 .part1button .category:hover {
     transform: translateY(-10px);
     background-color: white;
@@ -257,24 +258,29 @@ h1, p {
 }
 
 .part1button .category:hover #objet {
-    content: url("./import/objetsR.png");
+    content: url("./Pictures/objetsR.png");
 }
+
 .part1button .category:hover #acces {
-    content: url("./import/accèsR.png");
+    content: url("./Pictures/accèsR.png");
 }
+
 .part1button .category:hover #plan {
-    content: url("./import/planR.png");
+    content: url("./Pictures/planR.png");
 }
+
 .part1button .category:hover #accessibilite {
-    content: url("./import/accessibilitéR.png");
+    content: url("./Pictures/accessibilitéR.png");
 }
+
 .part1button .category:hover #services {
-    content: url("./import/servicesR.png");
+    content: url("./Pictures/servicesR.png");
 }
 
 .part1button .category p {
     font-size: 0.9rem;
 }
+
 .part1button .category:hover p{
     color: black;
 }
