@@ -603,6 +603,168 @@ h1, p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 553px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 100px;
+}
+  
+.footer-left {
+    margin-left: 7em;
+    font-size: 18px;
+}
+
+.footer-center {
+    font-size: 18px;
+}
+
+.texte_centre {
+    margin: 5px 0px 5px 0px;
+}
+
+.footer-right {
+    margin-right: 7em;
+}
+  
+#logo_bottom {
+    margin-bottom: 100px;
+    color: black;
+    font-weight: 500;
+    font-size: 75px;
+}
+
+.nom_logo {
+    font-weight: 700;
+    font-size: 24px;
+}
+  
+.tel {
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+.mail {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bloc_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.tel_mail {
+    display: flex;
+    align-items: center;
+    width: 215px;
+    justify-content: start;
+    gap: 15px;
+    padding: 7.5px 7.5px 10px 7.5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    background-color: white;
+}
+
+.tel_mail.mail {
+    border: 2px solid black; /* Bordure plus épaisse et noire */
+    padding: 5px;
+    width: 175px;
+}
+
+#numero_tel {
+    padding-right: 14px;
+    padding-top: 5px;
+}
+
+#mail_texte {
+    padding-left: 10px;
+}
+
+.icone {
+    padding: 5px 15px 15px 15px;
+    width: 10px;
+    height: 10px;
+}
+
+#footerh {
+    font-weight: bold;
+    padding: 20px 0px 20px 0px;
+    font-size: 23px;
+}
+
+.deuxitfd {
+    display: flex;
+    gap: 15px;
+    padding: 25px 0px 25px 0px;
+}
+
+.enmodepartage {
+    font-weight: 700;
+    font-size: 28px;
+    font-style: italic;
+}
+
+#ietbp {
+    font-weight: 700;
+    font-size: 24px;
+    padding: 15px 0px 15px 0px;
+}
+
+.ftgauche_noir {
+    color: black;
+}
+
+.ftgauche_rouge {   
+    color: red;
+}
+
+.email_droite {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    justify-content: start;
+    padding: 7.5px 7.5px 10px 7.5px;
+    border: 3px solid #000000;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: white;
+}
+
+#mail_droite {
+    margin-left: 25px;
+    margin-right: 225px;
+}
+
+#icone_fleche_droite {
+    margin-top: 10px;
+}
+  
+.mention_legale {
+    position: absolute;
+    width: 500px;
+    margin-left: 260px;
+    padding-bottom: 25px;
+    font-size: 19px;
+    bottom: -167em;
+}
+
+.mention_legale.droite {
+    bottom: -167em;
+    right: 0;
+    margin-right: 150px;
+} 
+
 /* Responsive ou mobile first*/
 @media (max-width: 1250px) {
     #logo_header {
