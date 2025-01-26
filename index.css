@@ -5,18 +5,34 @@
 
 .carousel {
     width: 100%;
-    height: 40em;
+    height: 45em;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex; /* Déjà dans la classe bootstrap */
     margin-top: 20px;
-    background-color: aqua;
     gap: 10em;
 }
 
+.carousel-control-prev {
+    height: 4em;
+    margin-top: 1em!important;
+    margin-left: 52em!important;
+}
+
+.carousel-control-next {
+    height: 4em;
+    margin-top: 1em!important;
+    margin-right: -2em!important;
+}
+
+.carousel-indicators {
+    top: 0px!important;
+    margin-top: 2.2em;
+    margin-right: -40em!important;
+}
+
 .carousel-indicators button {
-    width: 2em;
-    height: 2em;
+    width: 5em!important;
+    height: 0.3em!important;
 }
 
 .carousel-indicators .active {
@@ -24,19 +40,21 @@
 }
 
 .carousel-inner {
+    margin-top: 5em;
     overflow: hidden; /* Assure que rien ne dépasse du carrousel */
 }
 
 .carousel-item {
     transition: transform 0.5s ease-in-out;
-    background-color: violet;
 
 }
 
 /* Fixe la hauteur des images et leur ajustement */
 .carousel-item img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 100%;
     object-fit: cover; /* Les images conservent leurs proportions */
     width: 24%;
     border-radius: 1em;
+    margin-left: 0.5%;
 }
