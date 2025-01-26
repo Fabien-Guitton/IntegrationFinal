@@ -73,3 +73,59 @@ p {
 .part1button .category:hover p{
     color: black;
 }
+
+.vertical-slogan {
+    position: fixed;
+    /* Fixé sur l'écran */
+    left: 10px;
+    /* Positionné à gauche */
+    top: 50%;
+    /* Centré verticalement */
+    transform: translateY(-50%);
+
+
+    text-align: center;
+    /* Centre le texte et les icônes */
+    z-index: 1000;
+    /* Toujours visible par-dessus */
+}
+
+.vertical-slogan p {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    /* Orientation verticale du texte */
+    font-size: 1.1em;
+    /* Taille du texte */
+    font-weight: bold;
+
+    -webkit-text-stroke: 1px black;
+    /* Bordure épaisse noire */
+
+    margin-bottom: 15px;
+    /* Espace entre le texte et les icônes */
+}
+
+.vertical-slogan .social-icons {
+    display: flex;
+    /* Gère les icônes */
+    flex-direction: column;
+    /* Les empile verticalement */
+    align-items: center;
+    /* Centre les icônes */
+    gap: 10px;
+    /* Ajoute de l'espace entre les icônes */
+}
+
+.vertical-slogan .social-icons img {
+    width: 32px;
+    /* Taille des icônes */
+    height: 32px;
+    /* Taille uniforme */
+    transition: transform 0.3s ease;
+        /* Animation fluide */
+}
+
+.vertical-slogan .social-icons img:hover {
+    transform: translateX(10px);
+    /* Décale l'icône de 10px vers la droite */
+}
