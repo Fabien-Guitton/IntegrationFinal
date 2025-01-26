@@ -311,11 +311,11 @@ body {
 }
 
 @media only screen and (max-width: 1921px) {
-    .carousel {
+    #carousel1 {
         width: 100%;
         height: 41.2em;
         display: flex; /* Déjà dans la classe bootstrap */
-        margin-top: 7em;
+        margin-top: 10em;
     }
 
     /* Fixe la hauteur des images et leur ajustement */
@@ -502,4 +502,67 @@ p {
 }
 .part1button .category:hover p{
     color: black;
+}
+.carousel {
+    width: 100%;
+    height: 45em;
+    position: relative;
+    display: flex; /* Déjà dans la classe bootstrap */
+    margin-top: 20px;
+    gap: 10em;
+}
+
+/* SLIDER 2 */
+#carousel2 {
+    width: 100%;
+    height: 41.2em;
+    display: flex; /* Déjà dans la classe bootstrap */
+    margin-top: 10em;
+}
+
+.carousel-control-prev {
+    height: 4em;
+    margin-top: 1em!important;
+    margin-left: 52em!important;
+}
+
+.carousel-control-next {
+    height: 4em;
+    margin-top: 1em!important;
+    margin-right: -2em!important;
+}
+
+.carousel-indicators2 {
+    top: 0px!important;
+    margin-top: 2.2em;
+    margin-right: -21em!important;
+}
+
+.carousel-indicators2 button {
+    width: 5em!important;
+    height: 0.3em!important;
+    border-radius: 0%;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+
+.carousel-inner2 {
+    margin-top: 5em;
+    overflow: hidden; /* Assure que rien ne dépasse du carrousel */
+}
+
+.carousel-item2 {
+    transition: transform 0.5s ease-in-out;
+    margin-top: 6em!important;
+
+}
+
+/* Fixe la hauteur des images et leur ajustement */
+.carousel-item2 img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: cover; /* Les images conservent leurs proportions */
+    width: 24%;
+    border-radius: 1em;
+    margin-left: 0.5%;
 }
