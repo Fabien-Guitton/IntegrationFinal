@@ -32,10 +32,77 @@ document.addEventListener("DOMContentLoaded", () => {
     checkWindowSize();
 });
 
-/* SLIDER 1 */
-const carousel = new bootstrap.Carousel('#carousel1');
 
-/*
+const carousel1 = new bootstrap.Carousel('#carousel1');
+const carousel2 = new bootstrap.Carousel('#carousel2');
+const carousel3 = new bootstrap.Carousel('#carousel3');
+
+/* Les différents essaient de carousel natif
+
+    // ESSAIE 1 automatique
+    const carousel1 = document.getElementById("carousel1");
+    const images1 = carousel1.querySelectorAll("img");
+    let index1 = 0;
+
+    setInterval(() => {
+      images1[index1].classList.remove("active");
+      index1 = (index1 + 1) % images1.length; // Passer à l'image suivante
+      images1[index1].classList.add("active");
+    }, 3000); // Changement toutes les 3 secondes
+
+    // ESSAIE 2 avec des controles
+    const carousel2 = document.getElementById("carousel1");
+    const images2 = carousel2.querySelectorAll("img");
+    let index2 = 0;
+
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    prevButton.addEventListener("click", () => {
+      images2[index2].classList.remove("active");
+      index2 = (index2 - 1 + images2.length) % images2.length; // vers l'image précédente
+      images2[index2].classList.add("active");
+    });
+
+    nextButton.addEventListener("click", () => {
+      images2[index2].classList.remove("active");
+      index2 = (index2 + 1) % images2.length; // vers l'image suivante
+      images2[index2].classList.add("active");
+    });
+
+    // ESSAIE 3 automatique
+    const carousel1 = document.getElementById("carousel1");
+    const track1 = carousel1.querySelector(".carousel-track");
+    const images1 = track1.querySelectorAll("img");
+    let index1 = 0;
+
+    setInterval(() => {
+      index1 = (index1 + 1) % images1.length;
+      track1.style.transform = `translateX(-${index1 * 300}px)`;
+    }, 3000); // Changement toutes les 3 secondes
+
+    // ESSAIE 4 avec des controles
+    const carousel2 = document.getElementById("carousel2");
+    const track2 = carousel2.querySelector(".carousel-track");
+    const images2 = track2.querySelectorAll("img");
+    let index2 = 0;
+
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    prevButton.addEventListener("click", () => {
+      index2 = (index2 - 1 + images2.length) % images2.length;
+      track2.style.transform = `translateX(-${index2 * 300}px)`; // Glissement à horizontal
+    });
+
+    nextButton.addEventListener("click", () => {
+      index2 = (index2 + 1) % images2.length;
+      track2.style.transform = `translateX(-${index2 * 300}px)`;
+    });
+*/
+
+
+/*  // Bootstrap 5.3.3
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import Manipulator from './dom/manipulator.js'

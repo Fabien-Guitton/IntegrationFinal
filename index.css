@@ -21,13 +21,13 @@
 body {
     margin: 0px;
     font-family: 'Albert sans', sans-serif;
-    background-color: #EC1C24!important;
+    background-color: #EC1C24!important; /* Le !important sert a faire de la surcharge, il écrase le paramètre de bootstrap */
 }
 
 .background-color-image {
     background-image: url(./Pictures/Font.png);
     background-size: cover; /* L'image couvre tout l'écran */
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* Une seule et unique image */
     background-attachment: fixed;
     background-position: center;
 }
@@ -161,7 +161,7 @@ h1, p {
     transform: translateX(10px);
 }
 
-/* SLIDER 1 */
+/* SLIDER 1  + la suite au media queries */
 .carousel-indicators {
     padding-left: 15%!important;
 }
@@ -216,6 +216,7 @@ h1, p {
 }
 */
 
+/* Utiliser pour tout les carrousels */
 .carousel-inner {
     overflow: hidden; /* Assure que rien ne dépasse du carrousel */
 }
@@ -251,7 +252,7 @@ h1, p {
 }
 */
 
-/* BUTTON 1 */
+/* BUTTON 1 + contenus */
 .part1button {
     display: flex;
     flex-direction: column;
@@ -318,7 +319,7 @@ h1, p {
     color: black;
 }
 
-/* SLIDER 2 */
+/* SLIDER 2 + micro bloc du haut*/
 #carousel2 {
     width: 100%;
     height: 41.2em;
@@ -401,15 +402,15 @@ h1, p {
 
 /* Fixe la hauteur des images et leur ajustement */
 .carousel-item2 img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Faire les ombres */
     height: 100%;
     object-fit: cover; /* Les images conservent leurs proportions */
-    width: 24%;
+    width: 24%; /* Gerer combien d'images par slide */
     border-radius: 1em;
     margin-left: 0.5%;
 }
 
-/* BUTTON 2 */
+/* BUTTON 2 + contenus */
 .part2button {
     background-color: transparent;
     display: flex;
@@ -498,7 +499,7 @@ h1, p {
 
 }
 
-/* FORM */
+/* FORMULAIRE */
 .blocform {
     height: 250px;
     position: fixed;
@@ -525,7 +526,7 @@ h1, p {
     margin: 20px;
 }
 
-.email_droite{
+.email_droite {
     display: flex;
     align-items: center;
     width: 466px;
@@ -542,7 +543,7 @@ h1, p {
 
 #mail_droite {
     margin-left: 25px;
-    margin-right: 250px;
+    margin-right: 10px;
 }
 
 #icone_fleche_droite {
@@ -582,19 +583,17 @@ h1, p {
     width: 100%;
     height: 12em;
     position: relative;
-    display: flex; /* Déjà dans la classe bootstrap */
     margin-top: 18em;
 }
 
 .carousel-item3 {
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Vitesse de transition des sliders */
     margin-left: 0.2em;
 }
 
-/* Fixe la hauteur des images et leur ajustement */
 .carousel-item3 img {
     height: 10%;
-    object-fit: cover; /* Les images conservent leurs proportions */
+    object-fit: cover;
     width: 11%;
     border-radius: 0em!important;
     margin-left: 1em!important;
@@ -741,11 +740,11 @@ h1, p {
 
 #mail_droite {
     margin-left: 25px;
-    margin-right: 225px;
+    margin-right: 200px;
 }
 
 #icone_fleche_droite {
-    margin-top: 10px;
+    margin-top: 2px;
 }
   
 .mention_legale {
@@ -763,7 +762,7 @@ h1, p {
     margin-right: 150px;
 } 
 
-/* Responsive ou mobile first*/
+/* Responsive / mobile first*/
 @media (max-width: 1250px) {
     #logo_header {
         font-size: 60px;
@@ -861,11 +860,9 @@ h1, p {
     #carousel1 {
         width: 100%;
         height: 70em;
-        display: flex; /* Déjà dans la classe bootstrap */
         margin-top: 2em;
     }
     
-    /* Fixe la hauteur des images et leur ajustement */
     .carousel-item img {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         height: 68em;
@@ -880,11 +877,9 @@ h1, p {
     #carousel1 {
         width: 100%;
         height: 41.2em;
-        display: flex; /* Déjà dans la classe bootstrap */
         margin-top: 7.5em;
     }
 
-    /* Fixe la hauteur des images et leur ajustement */
     .carousel-item img {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         height: 40em;
