@@ -59,7 +59,7 @@ h1, p {
     margin: 10px 10px 10px 50px;
     color: black;
     font-weight: 700;
-    font-size: 70px;
+    font-size: clamp(3vh, 7vw, 10vh);
 }
 
 /* Bouton burger */
@@ -99,6 +99,7 @@ h1, p {
     margin: 10px 10px 10px 10px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 #loupe_header {
@@ -507,7 +508,9 @@ h1, p {
 }
 
 .carre_jaune {
-    background-color: yellow;
+    overflow-x: visible; /* Enleve les barres de défilements et permet a toute l'image d'être affichés */
+    overflow-y: visible;
+    background-color: #f8df00;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -515,8 +518,8 @@ h1, p {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1391px;
-    height: 397px;
+    width: clamp(5vh, 80vw, 150vh); /* Methode pour scale le texte en fonction de la fenêtre */
+    height: 410px;                  /* Evite d'écrire plusieurs fois "@media only screen and (max-width:)" */
     border-radius: 20px;
 }
 
@@ -526,28 +529,28 @@ h1, p {
     margin: 20px;
 }
 
-.email_droite {
+.email_droite{
     display: flex;
     align-items: center;
-    width: 466px;
-    height: 55px;
+    width: clamp(20vh, 70vw, 70vh) !important;
+    height: 90px !important;
     justify-content: start;
     padding: 7.5px 7.5px 10px 7.5px;
-    border: 3px solid #000000;
+    border: 3px solid black;
     border-radius: 50px;
     font-size: 20px;
     font-weight: 400;
-    background-color: yellow;
+    background-color: #f8df00 !important;
     margin: 20px;
 }
 
 #mail_droite {
     margin-left: 25px;
-    margin-right: 10px;
+    margin-right: clamp(19vh, 24vw, 70vh) !important;
 }
 
 #icone_fleche_droite {
-    margin-top: 1px;
+    margin-top: 0px !important;
 }
 
 .carre_jaune_texte {
@@ -561,12 +564,12 @@ h1, p {
 .carre_jaune_enmodetips {
     position: absolute;
     z-index: 1000;
-    top: -50px;
+    top: clamp(-5vh, -3vw, 15vh);
     left: 60px;
-        font-size: 58px;
+        font-size: clamp(3vh, 3vw, 10vh) !important;
         font-weight: 1000;
         color: white;
-        text-shadow: -7px 2px 0px black,
+        text-shadow: -7px 2px 0px black, /* Ensemble d'ombre pour faire un effets de bordure noir*/
                      -5px 0px 0px black,
                      2px 0px black,
                      5px 0px 0px black,
@@ -602,6 +605,7 @@ h1, p {
 
 /* FOOTER */
 .footer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 553px;
@@ -724,11 +728,11 @@ h1, p {
     color: red;
 }
 
-.email_droite {
+.email_droite_footer{
     display: flex;
     align-items: center;
-    width: 400px;
-    height: 60px;
+    width: clamp(20vh, 70vw, 70vh) !important;
+    height: 80px;
     justify-content: start;
     padding: 7.5px 7.5px 10px 7.5px;
     border: 3px solid #000000;
@@ -737,15 +741,6 @@ h1, p {
     font-weight: 400;
     background-color: white;
 }
-
-#mail_droite {
-    margin-left: 25px;
-    margin-right: 200px;
-}
-
-#icone_fleche_droite {
-    margin-top: 2px;
-}
   
 .mention_legale {
     position: absolute;
@@ -753,27 +748,29 @@ h1, p {
     margin-left: 260px;
     padding-bottom: 25px;
     font-size: 19px;
-    bottom: -167em;
+    bottom: 10px;
 }
 
 .mention_legale.droite {
-    bottom: -167em;
     right: 0;
     margin-right: 150px;
-} 
+}
 
-/* Responsive / mobile first*/
-@media (max-width: 1250px) {
-    #logo_header {
-        font-size: 60px;
+/* Responsive ou mobile first*/
+@media (max-width: 1420px) {
+    .infos_horaire {
+        font-size: 18px;
+        padding: 15px 20px;
     }
+}
 
+@media (max-width: 1250px) {
     .nav-links {
         gap: 15px;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1064px) {
     #bouton_burger {
         display: block;
     }
@@ -782,14 +779,9 @@ h1, p {
         display: none;
     }
 
-    #logo_header {
-        font-size: 50px;
-        margin: 10px;
-    }
-
     .infos_horaire {
         font-size: 16px;
-        padding: 15px 25px;
+        padding: 15px 20px;
     }
 
     .header-top {
@@ -799,7 +791,7 @@ h1, p {
     #loupe_header {
         width: 24px;
         height: 24px;
-        padding: 24px;
+        padding: 15px;
     }
 
     .menu_burger {
@@ -840,14 +832,37 @@ h1, p {
     
 }
 
-@media (max-width: 620px) {
-    #logo_header {
-        font-size: 30px;
-        margin: 0px;
+/* footer responsive */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Aligne les sections verticalement */
+        align-items: center; /* Centre le contenu horizontalement */
+        text-align: center; /* Centre le texte */
     }
 
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin: 0px 0; /* Ajoute de l'espacement entre les sections */
+    }
+
+    .mention_legale {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .mention_legale.droite {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 620px) {
     #loupe_header {
-        padding: 10px;
+        padding: 5px;
+    }
+
+    .carre_jaune {
+        height: 600px;
     }
 
     .infos_horaire {
