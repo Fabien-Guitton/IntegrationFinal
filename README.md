@@ -1,6 +1,5 @@
 # IntegrationFinal
-<<<<<<< HEAD
-Projet Final Programmation Web Client  
+Projet Final de Programmation Web Client  
 
 ### Contributeurs :
 - Fabien Guitton
@@ -30,12 +29,5 @@ Le dépôt Celene est ici : [Dépot](https://celene.univ-tours.fr/mod/assign/vie
 | Pousser les changements sur la branche principale | `git push origin main`            |
 | Supprimer une branche locale               | `git branch -d nom_de_la_branche`        |
 | Supprimer une branche distante             | `git push origin --delete nom_de_la_branche` |
-=======
-Projet Final Programmation Web Client 
 
-<<<<<<< HEAD
-Modifier les couleurs des images
-=======
-Fond Gris qui sera remplacer par l'image de votre choix.
->>>>>>> origin/feature/button2
->>>>>>> origin/feature/start-integration
+Le changement des couleurs, polices et images sont possibles.  
